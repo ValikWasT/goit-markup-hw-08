@@ -304,6 +304,7 @@ img {
   background-color: #fff;
   width: 100vw;
   height: 100vh;
+  z-index: 5;
 }
 @media screen and (min-width: 768px) {
   .mob-menu {
@@ -1078,12 +1079,26 @@ img {
 
 .filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  justify-content: start;
+  margin-top: -15px;
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
+    justify-content: center;
+  }
 }
 
-.filter__item:not(:first-child) {
-  margin-left: 8px;
+.filter__item {
+  margin-right: 8px;
+  margin-top: 15px;
+}
+@media screen and (min-width: 1200px) {
+  .filter__item:not(:first-child) {
+    margin-left: 8px;
+  }
 }
 
 .filter__btn {
@@ -1127,6 +1142,12 @@ img {
   color: var(--first-text);
 }
 
+@media screen and (min-width: 768px) {
+  .project__name--small {
+    font-size: 17px;
+  }
+}
+
 .project__kind {
   font-size: 16px;
   line-height: 1.88;
@@ -1134,18 +1155,38 @@ img {
   color: var(--secont-text);
 }
 
-.project {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-bottom: -30px;
+@media screen and (min-width: 768px) {
+  .project {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .project__item {
-  flex-basis: calc(33.3333333333% - 30px);
-  margin-left: 30px;
+  width: 100%;
   margin-bottom: 30px;
-  max-width: 370px;
+}
+.project__item:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 480px) {
+  .project__item {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .project__item {
+    flex-basis: calc(50% - 30px);
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project__item {
+    flex-basis: calc(33.3333333333% - 30px);
+    margin-left: 30px;
+    max-width: 370px;
+  }
 }
 
 .project__link {
@@ -1179,6 +1220,25 @@ img {
 }
 .project__item:hover .project__text, .project__link:focus .project__text {
   transform: translateY(0);
+}
+
+.project__img {
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .project__img {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .project__img {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project__img {
+    width: 370px;
+  }
 }
 
 .modal {

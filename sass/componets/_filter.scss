@@ -1,11 +1,24 @@
 .filter {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    justify-content: start;
+    margin-top: -15px;
+
+    @include desktop {
+        margin-bottom: 50px;
+        justify-content: center;
+    }
 }
 
-.filter__item:not(:first-child) {
-    margin-left: 8px;
+.filter__item {
+    margin-right: 8px;
+    margin-top: 15px;
+    @include desktop {
+        &:not(:first-child) {
+            margin-left: 8px;
+        }
+    }
 }
 
 .filter__btn {
