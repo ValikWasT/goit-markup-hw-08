@@ -10,6 +10,14 @@
   text-align: center;
   width: 100%;
   margin: 0 auto;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../image/hero-bg-mob-2x.jpg);
+    }
+
   @include mobile {
     width: 480px;
   }
@@ -17,6 +25,12 @@
        width: 768px;
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
           url(../image/hero-bg-tab.jpg);
+          @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+              background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../image/hero-bg-tab-2x.jpg);
+            }
      }
     @include desktop {
       // min-width: 1200px;
@@ -26,6 +40,12 @@
       padding-bottom: 200px;
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../image/hero-bg.jpg);
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../image/hero-bg-2x.jpg);
+        }
     }
 }
 

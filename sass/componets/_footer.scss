@@ -54,6 +54,11 @@
 
 .footer-soc {
     margin-bottom: 60px;
+    
+    @include tablet {
+            
+        }
+
     @include desktop {
         margin-bottom: 0;
     }
@@ -71,6 +76,13 @@
 
 .footer__container {
     text-align: center;
+    
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
     @include desktop {
     display: flex;
     align-items: baseline;
@@ -80,6 +92,11 @@
 
 .footer__address {
     margin-bottom: 60px;
+
+    @include tablet {
+    
+    }
+
     @include desktop {
     margin-right: 70px;
     margin-bottom: 0;
