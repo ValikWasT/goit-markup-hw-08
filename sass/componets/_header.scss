@@ -318,11 +318,20 @@
             border: 1px solid rgba(33, 33, 33, 0.2);
                 transform: rotate(90deg);
                 margin: 0 10px;
+                
         }
+    
         @include mobile {
             font-size: 18px;
         }
 
+}
+
+.mob-soc-list__link--null {
+    &::after {
+        border: transparent;
+    }
+    
 }
 
 .mob-soc-list {
@@ -334,4 +343,8 @@
     &:last-child {
         margin-bottom: 62px;
     }
+}
+
+.mob-list__link--accent {
+    color: var(--accent);
 }
